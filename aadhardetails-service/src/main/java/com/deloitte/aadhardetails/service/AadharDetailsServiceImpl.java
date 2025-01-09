@@ -38,7 +38,7 @@ public class AadharDetailsServiceImpl implements AadharDetailsService {
 	public Optional<AadharDetails> findDetailsByNumber(String aadharno) {
 		// TODO Auto-generated method stub
 		Optional<AadharDetails> details = repo.findDetailsByNumber(aadharno);
-		if(details.isEmpty())
+		if(!details.isPresent())
 			throw new AadharNotFoundException();
 		return details;
 	}
