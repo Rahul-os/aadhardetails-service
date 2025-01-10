@@ -9,8 +9,13 @@ spring:
     
   datasource:
     
-    url: jdbc:oracle:thin:@localhost:1521:xe
-    username: bankapplication                                 #new database name in oracle
+#    url: jdbc:oracle:thin:@localhost:1521:xe
+#    username: bankapplication                                 #new database name in oracle
+#    password: rahul123 
+    driver-class-name: com.mysql.jdbc.Driver
+    #url: jdbc:oracle:thin:@localhost:1521:xe
+    url: jdbc:mysql://localhost:3306/bankcustomerinfo
+    username: root                                 #new database name in mysql
     password: rahul123 
   jpa:
     hibernate:
@@ -52,5 +57,6 @@ management:
   endpoint:
     health:
       show-details: always
-        
+  server:    
+    port: 9091 
     
